@@ -48,6 +48,7 @@
             width: 4px;
             height: 100%;
             background-color: var(--accent-color, #3b82f6);
+            display: none; /* Hide the colored accent bars */
         }
         .metric-card.debt-card::before {
             --accent-color: #f43f5e;
@@ -396,7 +397,7 @@
             <div class="col-md-4">
                 <div class="metric-card debt-card">
                     <div class="metric-icon"><i class="fas fa-chart-pie fa-3x"></i></div>
-                    <div class="metric-title"><i class="fas fa-chart-pie"></i>Federal Debt to GDP Ratio <span class="info-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="The Federal Debt to GDP ratio measures the total U.S. federal debt as a percentage of the nation's Gross Domestic Product. A higher percentage indicates a higher debt burden relative to economic output."><i class="fas fa-info"></i></span></div>
+                    <div class="metric-title"><i class="fas fa-chart-pie"></i>Debt to GDP Ratio <span class="info-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="The Federal Debt to GDP ratio measures the total U.S. federal debt as a percentage of the nation's Gross Domestic Product. A higher percentage indicates a higher debt burden relative to economic output."><i class="fas fa-info"></i></span></div>
                     <div class="metric-value" id="gdp-value">Loading...</div>
                     <div class="metric-change" id="gdp-change">Loading...</div>
                     <div class="data-source">Source: U.S. Treasury & Federal Reserve</div>
@@ -468,7 +469,7 @@
                     </ul>
                     <p>Key metrics displayed include:</p>
                     <ul>
-                        <li><strong>Federal Debt to GDP Ratio</strong> - Shows the U.S. federal debt as a percentage of GDP, indicating the country's debt burden relative to its economic output</li>
+                        <li><strong>Debt to GDP Ratio</strong> - Shows the U.S. federal debt as a percentage of GDP, indicating the country's debt burden relative to its economic output</li>
                         <li><strong>Unemployment Rate</strong> - The percentage of the labor force that is jobless and actively seeking employment</li>
                         <li><strong>Inflation Rate</strong> - The rate at which the general level of prices for goods and services is rising</li>
                         <li><strong>S&P 500 Index</strong> - A stock market index tracking the performance of 500 large companies listed on U.S. exchanges</li>
