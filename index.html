@@ -361,6 +361,18 @@
             max-width: 600px;
             margin: 0 auto;
         }
+        .current-value-inline {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f8f9fa;
+            background-color: rgba(44, 48, 52, 0.9);
+            padding: 4px 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -927,14 +939,14 @@
                 }
             });
             
-            // Display the current value on the chart
-            const valueDisplay = document.createElement('div');
-            valueDisplay.className = 'current-value';
-            valueDisplay.innerHTML = `<span>${formatNumber(currentValue, 2)}</span>`;
+            // Display the current value in the title
+            const valueSpan = document.createElement('span');
+            valueSpan.className = 'current-value-inline';
+            valueSpan.textContent = formatNumber(currentValue, 2);
             
-            // Insert the value display before the chart
-            const chartContainer = document.querySelector('#sp500-chart').parentElement;
-            chartContainer.insertBefore(valueDisplay, document.querySelector('#sp500-chart'));
+            // Find the title element and append the value
+            const titleElement = document.querySelector('.sp500-card .metric-title');
+            titleElement.appendChild(valueSpan);
         }
 
         // Function to create Treasury Yield chart with real data or fallback
@@ -1046,14 +1058,14 @@
                 }
             });
             
-            // Display the current value on the chart
-            const valueDisplay = document.createElement('div');
-            valueDisplay.className = 'current-value';
-            valueDisplay.innerHTML = `<span>${formatNumber(currentValue, 1)}%</span>`;
+            // Display the current value in the title
+            const valueSpan = document.createElement('span');
+            valueSpan.className = 'current-value-inline';
+            valueSpan.textContent = formatNumber(currentValue, 1) + '%';
             
-            // Insert the value display before the chart
-            const chartContainer = document.querySelector('#treasury-chart').parentElement;
-            chartContainer.insertBefore(valueDisplay, document.querySelector('#treasury-chart'));
+            // Find the title element and append the value
+            const titleElement = document.querySelector('.treasury-card .metric-title');
+            titleElement.appendChild(valueSpan);
         }
 
         // Function to update the last updated timestamp
