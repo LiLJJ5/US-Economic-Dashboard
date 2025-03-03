@@ -2,10 +2,6 @@
 
 A real-time dashboard displaying key economic indicators for the United States economy.
 
-# US Economic Metrics Dashboard
-
-A real-time dashboard displaying key economic indicators for the United States economy.
-
 ## Features
 
 - **Federal Debt to GDP Ratio**: Tracks the ratio of federal debt to gross domestic product
